@@ -1,0 +1,177 @@
+
+:root {
+  --bg: #000000;
+  --tx: #e6ebf7;
+  --mut: #8791a8;
+  --azul: #2347b8;
+  --azul2: #6d8cff;
+  --linha: #1a2033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--tx);
+  font-family: 'Figtree', sans-serif;
+  line-height: 1.8;
+}
+
+/* Marca no canto superior esquerdo */
+.cabecalho {
+  padding: 26px 5%;
+}
+
+.marca {
+  display: inline-block;
+  color: var(--azul2);
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-shadow: 0 0 28px rgba(58, 99, 220, 0.18);
+}
+
+.marca span {
+  color: var(--mut);
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  width: min(100% - 40px, 900px);
+  margin: 30px auto 0;
+}
+
+.apresentacao {
+  padding: clamp(24px, 5vw, 56px);
+  border: 1px solid var(--linha);
+  border-radius: 18px;
+  background:
+    radial-gradient(
+      ellipse at top right,
+      rgba(35, 71, 184, 0.12),
+      transparent 55%
+    ),
+    #05070d;
+}
+
+/* Pequeno destaque acima do título */
+.etiqueta {
+  margin: 0 0 20px;
+  color: var(--azul2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+/* Título principal */
+h1 {
+  margin: 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+h1 span {
+  color: var(--azul2);
+}
+
+.linha-destaque {
+  width: 64px;
+  height: 3px;
+  margin: 30px 0;
+  border-radius: 4px;
+  background: var(--azul);
+}
+
+/* Textos de apresentação */
+.texto-apresentacao {
+  max-width: 700px;
+  margin: 0 0 20px;
+  color: var(--mut);
+  font-size: 1.05rem;
+}
+
+.texto-apresentacao strong {
+  color: var(--tx);
+  font-weight: 600;
+}
+
+/* Mensagem de boas-vindas */
+.boas-vindas {
+  margin: 32px 0 0;
+  padding: 20px 22px;
+  border-left: 3px solid var(--azul2);
+  border-radius: 0 8px 8px 0;
+  background: rgba(35, 71, 184, 0.10);
+  color: var(--tx);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* Rodapé */
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 26px 4px 32px;
+  color: var(--mut);
+  font-size: 0.85rem;
+}
+
+.rodape span:first-child {
+  color: var(--azul2);
+  font-weight: 600;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 22px 20px;
+  }
+
+  .conteudo {
+    width: calc(100% - 28px);
+    margin-top: 12px;
+  }
+
+  .apresentacao {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+  }
+
+  .texto-apresentacao {
+    font-size: 1rem;
+  }
+
+  .rodape {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
